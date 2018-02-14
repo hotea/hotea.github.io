@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Hotea's Blog - tmp</title><link href="https://hotea.github.io/" rel="alternate"></link><link href="https://hotea.github.io/feeds/tmp.atom.xml" rel="self"></link><id>https://hotea.github.io/</id><updated>2018-02-14T14:33:00+08:00</updated><entry><title>Build blog with Pelican</title><link href="https://hotea.github.io/build-blog-with-pelican.html" rel="alternate"></link><published>2018-02-14T14:33:00+08:00</published><updated>2018-02-14T14:33:00+08:00</updated><author><name>hotea</name></author><id>tag:hotea.github.io,2018-02-14:/build-blog-with-pelican.html</id><summary type="html">&lt;h3&gt;data structure &amp;amp; algorithm&lt;/h3&gt;
+&lt;p&gt;leetcode&lt;/p&gt;</summary><content type="html">&lt;h3&gt;data structure &amp;amp; algorithm&lt;/h3&gt;
+&lt;p&gt;leetcode&lt;/p&gt;</content></entry></feed>
