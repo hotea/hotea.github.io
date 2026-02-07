@@ -2,14 +2,44 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
+const REPO = 'hotea/hotea.github.io';
+const BRANCH = 'master';
+
 const posts = (await getCollection('blog'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const today = new Date().toISOString().split('T')[0];
+const template = `---
+title: "New Post"
+description: ""
+date: ${today}
+tags: []
+---
+
+Write your content here...
+`;
+const newPostUrl = `https://github.com/${REPO}/new/${BRANCH}/src/content/blog?filename=new-post.md&value=${encodeURIComponent(template)}`;
 ---
 
 <BaseLayout title="Blog - Hotea" description="Thoughts on programming, technology, and more.">
   <section class="max-w-4xl mx-auto px-6 pt-20 pb-8">
-    <h1 class="text-3xl font-bold tracking-tight mb-2">Blog</h1>
-    <p class="text-text-muted">Thoughts on programming, technology, and more.</p>
+    <div class="flex items-center justify-between">
+      <div>
+        <h1 class="text-3xl font-bold tracking-tight mb-2">Blog</h1>
+        <p class="text-text-muted">Thoughts on programming, technology, and more.</p>
+      </div>
+      <a
+        href={newPostUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-1.5 px-4 py-2 bg-accent text-white text-sm font-medium rounded-lg hover:bg-accent-light transition-colors shrink-0"
+      >
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+        </svg>
+        New Post
+      </a>
+    </div>
   </section>
 
   <section class="max-w-4xl mx-auto px-6 pb-20">
